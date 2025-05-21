@@ -42,6 +42,8 @@ const Card = (imgData) => {
     user: { name },
     created_at: createdDate,
     links: { self },
+    licenseName,
+    licenseURL
   } = imgData;
   return `
     <figure class="image">
@@ -63,6 +65,7 @@ const Card = (imgData) => {
               View it on Unsplash.
             </a>
           </p>
+          <p>License: <a href = ${licenseURL}>${licenseName}</a>.</p>
         </div>
       </figcaption>
     </figure>
